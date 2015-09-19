@@ -115,6 +115,9 @@ input[type=url]:focus {
   outline: none;
 }
 
+.header {
+  margin-left: 30px;
+}
 
 .error {
   border: red solid 4px;
@@ -146,5 +149,17 @@ input[type=url]:focus {
 
 .creator .message {
   clear: both;
+}
+
+.invalidInput p {
+  color: red;
+}
+
+.invalidInput input[type=text]:focus {
+  border-bottom-color: red;
+}
+
+.invalidInput:focus {
+  border: 1px solid red;
 }
 
