@@ -39,7 +39,9 @@ h1 {
   display: block;
   text-align: center;
 }
-
+.navigation .logout {
+  float: right;
+}
 .navigation li a:hover {
   background-color: #ddd;
 }

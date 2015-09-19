@@ -1,11 +1,14 @@
 <div id='container'>
 <!-- Your code here -->
-  <form name="shortenForm" ng-submit='addLink()'>
-    <input class='text' type='text' name='url' ng-model='link.url'>
-    <button>Shorten</button>
+  <form name="shortenForm" ng-submit='addLink(shortenForm.$valid)' novalidate>
+    <div ng-class="{ ''}"
+      <input class='text' type='text' name='url' ng-pattern='rValidUrl' ng-model='link.url'>
+      <p ng-show="shortenForm.$invalid && !shortenForm.link.url.$pristine" class="help-block">Please enter a valid url</p>
+      <button>Shorten</button>
+
   </form>
-  <img class='spinner' src='/spiffygif_46x46.gif'>
-  <div class='message'></div>
+  <img class='spinner' src='/assets/spiffygif_46x46.gif' ng-hide='hide' >
+  <div ng-include src="'app/links/links.html'"></div>
 </div>
 
 
